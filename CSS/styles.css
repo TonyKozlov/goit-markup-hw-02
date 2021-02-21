@@ -20,7 +20,15 @@ body {
   line-height: 1.71;
 }
 
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -86,9 +94,13 @@ header {
 
 .hero {
   background-color: #2f303a;
+
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--secondary-title-color);
 
   font-weight: 900;
@@ -101,12 +113,20 @@ header {
 /* button */
 
 .button {
+  display: inline-block;
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  width: 200px;
+  height: 50px;
+
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  text-align: center;
 }
 
 .button.primary {
@@ -127,9 +147,16 @@ header {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* specificity */
+
+.specificity-list {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .specificity-list .title {
   color: var(--title-text-color);
@@ -138,9 +165,28 @@ header {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.specificity-list p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*about us*/
+
+.section.about h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 /* team */
+
+.team-list {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
 
 .team-list .title {
   color: var(--title-text-color);
@@ -150,6 +196,8 @@ header {
   line-height: 1.19;
 }
 
+.team-list.item {
+}
 .profession {
   font-size: 16px;
   line-height: 1.19;
@@ -193,8 +241,17 @@ address a {
 }
 
 .filters button {
+  display: inline-block;
+  border: transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+  height: 38px;
+
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
+
+  text-align: center;
 }
 
 .filters button:hover,
