@@ -11,6 +11,13 @@
   --secondary-bg-color: #f5f4fa;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
@@ -18,20 +25,27 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.71;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: auto;   
 }
 
 .container {
-  margin-left: auto;
+  margin-right: auto;
   margin-top: auto;
   width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .list {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
 }
 
 body a {
@@ -46,7 +60,7 @@ body a {
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
-}
+ }
 
 nav .logotext {
   color: black;
@@ -56,9 +70,14 @@ nav .logotext {
   line-height: 1.38;
 }
 
+nav {
+  display: flex;
+}
+
 header {
   padding-top: 24px;
   padding-bottom: 25px;
+  top: 32px;
 
   background-color: var(--primary-bg-color);
 }
@@ -98,7 +117,7 @@ header {
 /* Hero */
 
 .hero {
-  background-color: #2f303a;
+    background-color: #2f303a;
 
   text-align: center;
 }
@@ -227,11 +246,16 @@ header {
   line-height: 1.19;
 }
 
+footer .container {
+  display: inline;
+}
+
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
   background-color: #2f303a;
+  margin-right: auto;
 }
 
 footer .logotext {
