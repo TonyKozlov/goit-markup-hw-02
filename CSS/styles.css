@@ -17,18 +17,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
-
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  line-height: 1.71;
-  left: 0;
-  top: 0;
-  padding: 0;
-  margin: auto;   
-}
+/* utilities */
 
 .container {
   margin-right: auto;
@@ -47,19 +36,68 @@ body {
   display: flex;
 }
 
+/* sections */
+
+.section-title {
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  padding: 0;
+  margin: auto;
+
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  left: 0;
+  top: 0;
+}
+
 body a {
   text-decoration: none;
+}
+
+/* header */
+
+header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  top: 32px;
+
+  background-color: var(--primary-bg-color);
+}
+
+header .main {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 /* logo */
 
 .logo {
+  margin-right: 93px;
+
   color: var(--accent-color);
 
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   line-height: 1.19;
- }
+}
 
 nav .logotext {
   color: black;
@@ -69,24 +107,11 @@ nav .logotext {
   line-height: 1.38;
 }
 
-nav {
-  display: flex;
-}
-
-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  top: 32px;
-  
-  background-color: var(--primary-bg-color);
-}
-
-header .container {
-  display: flex;
-  align-items: center;
-}
-
 /* Site nav */
+
+header .element:not(:last-child) {
+  margin-right: 50px;
+}
 
 .site-nav .link {
   color: var(--title-text-color);
@@ -94,6 +119,9 @@ header .container {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav .link:hover,
@@ -105,11 +133,15 @@ header .container {
   color: var(--accent-color);
 }
 
-header .container .list {
+.container .info {
   margin-left: auto;
 }
 
 .contacts {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -125,7 +157,10 @@ header .container .list {
 /* Hero */
 
 .hero {
-    background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: #2f303a;
 
   text-align: center;
 }
@@ -169,24 +204,19 @@ header .container .list {
   background-color: #188ce8;
 }
 
-/* sections */
-
-.section-title {
-  color: var(--title-text-color);
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /* specificity */
 
 .specificity-list {
   padding-top: 94px;
-  padding-bottom: 94px;
+  padding-bottom: 0px;
+}
+
+.specificity-list .element {
+  width: 270px;
+}
+
+.specificity-list .element:not(:last-child) {
+  margin-right: 30px;
 }
 
 .specificity-list .title {
@@ -217,17 +247,25 @@ header .container .list {
   margin-bottom: 50px;
 }
 
+.section.about .element:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* team */
 
 .section.team {
   padding-top: 94px;
   padding-bottom: 94px;
-
+  text-align: center;
   background-color: var(--secondary-bg-color);
 }
 
-.section-title {
+.section.team .section-title {
   margin-bottom: 50px;
+}
+
+.section.team .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .team-list img {
@@ -261,6 +299,7 @@ footer .container {
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
+  padding-left: 15px;
 
   background-color: #2f303a;
   margin-right: auto;
@@ -294,11 +333,16 @@ address a {
 /* portfolio */
 
 .filters {
-  padding-top: 94px;
-
+  margin-top: 94px;
+  margin-bottom: 94px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  justify-content: center;
+}
+
+.filters .element:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filters button {
@@ -320,6 +364,10 @@ address a {
 .filters button:focus {
   color: var(--secondary-title-color);
   background-color: var(--accent-color);
+}
+
+.projects.list {
+  flex-wrap: wrap;
 }
 
 .projects img {
@@ -346,5 +394,15 @@ address a {
 }
 
 .projects .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.projects .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
 }
